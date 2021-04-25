@@ -6,7 +6,7 @@ node_modules/
 *.webloc
 *.png
 *.zip
-
 # OS generated files #
 ######################
 .DS_Store
+.env
