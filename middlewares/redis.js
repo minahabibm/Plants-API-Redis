@@ -2,19 +2,21 @@ const redis = require("redis");
 var session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 
-const REDIS_HOST = process.env.REDIS_HOST || '127.0.0.1';
+const REDIS_HOST = process.env.REDIS_HOSTNAME || '127.0.0.1';
 const REDIS_PORT = process.env.REDIS_PORT || 6379;
+const REDIS_PASSWORD = process.env.REDIS_PASSWORD || null
 
 redisClient = redis.createClient({
   host: REDIS_HOST,
   port: REDIS_PORT,
+  ...(REDIS_PASSWORD && { password: REDIS_PASSWORD }),
 });
-redisStore = new RedisStore({ 
-    host: 'localhost', 
-    port: REDIS_PORT, 
-    client: redisClient, 
-    ttl: 3600 
+
+redisStore = new RedisStore({
+  client: redisClient, 
+  ttl: 3600 
 });
+
 
 setup = () => {
     redisClient.on('connect', function(){

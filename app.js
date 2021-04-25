@@ -1,5 +1,7 @@
 const express = require("express");
 const session = require('express-session');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const routes = require('./routes/index');
 const redis = require('./middlewares/redis');
