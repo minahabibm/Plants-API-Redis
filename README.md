@@ -1,8 +1,8 @@
-# redis - cache & session 
+# redis - cache & session
 
 This is a plants App API; a tutorial for express and redis. Used to Search and Obtain data about plants from trefle API.
 
-The API will will create GET and POST Endpoints, to connect, login to the plants API, and Fetch data from trefle API. Then, cache the results for common searches in redis cache or for specified searches, you will need to login to search and redis would create a session, and cache your searched phrases in session store per session.  
+The API will create GET and POST Endpoints, to connect, login to the plants API, and Fetch data from trefle API. Then, cache the results for common searches in redis cache or for specified searches, you will need to login to search and redis would create a session, and cache your searched phrases in session store per session.  
 
 ## Technology Stack
 * Node.JS
@@ -14,7 +14,7 @@ The API will will create GET and POST Endpoints, to connect, login to the plants
 ## Initial Setup
 * Clone the repository.
 * Install redis or use the docker build.
-    
+
 ### Build and install
 Ensure you have: Node.JS, npm, redis.
 
